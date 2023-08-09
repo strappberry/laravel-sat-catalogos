@@ -39,9 +39,18 @@ php artisan vendor:publish --tag="laravel-sat-catalogos-views"
 ## Uso
 
 ```php
-$laravelSatCatalogos = new Strappberry\LaravelSatCatalogos();
-echo $laravelSatCatalogos->echoPhrase('Hello, Strappberry!');
+use Strappberry\LaravelSatCatalogos\Models\CcpDerechoDePaso;
+
+$derechoPaso = CcpDerechoDePaso::first();
 ```
+
+## Roadmap
+
+[x] Modelos CFDI 4.0
+[x] Modelos Carta Porte
+[] Modelos Comercio exterior
+[] Modelos Nomina
+[] Modelos Retenciones
 
 ## Pruebas
 
