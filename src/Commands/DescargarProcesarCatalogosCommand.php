@@ -2,7 +2,6 @@
 
 namespace Strappberry\LaravelSatCatalogos\Commands;
 
-use Dedoc\Scramble\Support\Generator\Schema;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
@@ -29,8 +28,9 @@ class DescargarProcesarCatalogosCommand extends Command
             ->get('https://github.com/phpcfdi/resources-sat-catalogs/archive/refs/heads/master.zip');
         $disk->put('catalogos.zip', $catalogo->body());
 
-        if (!$disk->exists('catalogos.zip')) {
+        if (! $disk->exists('catalogos.zip')) {
             $this->error('No se pudo descargar el archivo de catálogos');
+
             return self::FAILURE;
         }
 
@@ -49,12 +49,12 @@ class DescargarProcesarCatalogosCommand extends Command
                 continue;
             }
 
-            DB::statement('DROP TABLE IF EXISTS ' . $table);
+            DB::statement('DROP TABLE IF EXISTS '.$table);
         }
 
-        $this->info("Creando tablas...");
+        $this->info('Creando tablas...');
         $schemaFileList = $disk->files('catalogos/resources-sat-catalogs-master/database/schemas');
-        foreach ($schemaFileList  as $filePath) {
+        foreach ($schemaFileList as $filePath) {
             $info = pathinfo($filePath);
             $schema = $disk->get($filePath);
 
@@ -88,7 +88,7 @@ class DescargarProcesarCatalogosCommand extends Command
             DB::statement($schema);
         }
 
-        $this->info("Insertando datos...");
+        $this->info('Insertando datos...');
         $dataFileList = $disk->files('catalogos/resources-sat-catalogs-master/database/data');
         foreach ($dataFileList as $filePath) {
             try {
@@ -98,12 +98,12 @@ class DescargarProcesarCatalogosCommand extends Command
                 $data = str($data)
                     ->replace("PRAGMA foreign_keys=OFF;\n", '')
                     ->replace("BEGIN TRANSACTION;\n", '')
-                    ->replace("COMMIT;", '')
+                    ->replace('COMMIT;', '')
                     ->replace('"', '`')
                     ->toString();
 
                 $lines = explode("\n", $data);
-                $parts = explode("VALUES", $lines[0]);
+                $parts = explode('VALUES', $lines[0]);
                 $insert = trim($parts[0]);
 
                 $chunks = array_chunk($lines, 200);
