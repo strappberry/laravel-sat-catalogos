@@ -4,6 +4,7 @@ namespace Strappberry\LaravelSatCatalogos;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Strappberry\LaravelSatCatalogos\Commands\DescargarProcesarCatalogosCommand;
 use Strappberry\LaravelSatCatalogos\Commands\LaravelSatCatalogosCommand;
 
 class LaravelSatCatalogosServiceProvider extends PackageServiceProvider
@@ -20,6 +21,7 @@ class LaravelSatCatalogosServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             ->hasMigration('create_laravel-sat-catalogos_table')
-            ->hasCommand(LaravelSatCatalogosCommand::class);
+            ->hasCommand(LaravelSatCatalogosCommand::class)
+            ->hasCommand(DescargarProcesarCatalogosCommand::class);
     }
 }
