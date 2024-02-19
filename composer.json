@@ -1,6 +1,6 @@
 {
     "name": "strappberry/laravel-sat-catalogos",
-    "description": "This is my package laravel-sat-catalogos",
+    "description": "Este es un paquete para Laravel que te permite manejar los catálogos del SAT de manera sencilla y rápida.",
     "keywords": [
         "Strappberry",
         "laravel",

@@ -12,7 +12,20 @@ Se usa el repositorio de [PHPCfdi Resources Sat Catalogs](https://github.com/php
 
 ## Instalación
 
-Puedes instalar el paquete a través de composer:
+Puedes instalar el paquete a través de composer
+
+Agrega el repositorio tipo vcs a tu archivo de `composer.json`
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/strappberry/laravel-sat-catalogos.git"
+        }
+    ]
+}
+```
 
 ```bash
 composer require strappberry/laravel-sat-catalogos
