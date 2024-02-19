@@ -62,9 +62,12 @@ $derechoPaso = CcpDerechoDePaso::first();
 - [ ] Modelos CFDI 3.3
 - [x] Modelos CFDI 4.0
 - [x] Modelos Carta Porte
+- [x] Modelos Carta Porte 3.0
 - [ ] Modelos Comercio exterior
 - [ ] Modelos Nómina
 - [ ] Modelos Retenciones
+- [ ] Migrations
+- [ ] Factories
 
 ## Pruebas
 
@@ -99,6 +102,38 @@ CcpTiposRemolque
 CcpTiposServicio
 CcpTiposTrafico
 CcpTransporte
+Ccp30AutorizacionesNaviero
+Ccp30ClavesUnidades
+Ccp30CodigosTransporteAereo
+Ccp30Colonias
+Ccp30CondicionesEspeciales
+Ccp30ConfiguracionesAutotransporte
+Ccp30ConfiguracionesMaritimas
+Ccp30Contenedores
+Ccp30ContenedoresMaritimos
+Ccp30DerechosDePaso
+Ccp30DocumentosAduaneros
+Ccp30Estaciones
+Ccp30FigurasTransporte
+Ccp30FormasFarmaceuticas
+Ccp30Localidades
+Ccp30MaterialesPeligrosos
+Ccp30Municipios
+Ccp30PartesTransporte
+Ccp30ProductosServicios
+Ccp30RegimenesAduaneros
+Ccp30RegistrosIstmo
+Ccp30SectoresCofepris
+Ccp30TiposCarga
+Ccp30TiposCarro
+Ccp30TiposEmbalaje
+Ccp30TiposEstacion
+Ccp30TiposMateria
+Ccp30TiposPermiso
+Ccp30TiposRemolque
+Ccp30TiposServicio
+Ccp30TiposTrafico
+Ccp30Transportes.php
 Cfdi40Aduana
 Cfdi40ClavesUnidad
 Cfdi40CodigoPostal
