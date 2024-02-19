@@ -2,6 +2,18 @@
 
 All notable changes to `laravel-sat-catalogos` will be documented in this file.
 
+## 0.1.1 - 2024-02-19
+
+### What's Changed
+
+* Develop by @strappberry in https://github.com/strappberry/laravel-sat-catalogos/pull/4
+
+### New Contributors
+
+* @strappberry made their first contribution in https://github.com/strappberry/laravel-sat-catalogos/pull/4
+
+**Full Changelog**: https://github.com/strappberry/laravel-sat-catalogos/compare/v0.1.0...v0.1.1
+
 ## 0.1.0 - 2023-08-10
 
 - Comando para agregar los registros a la base de datos
