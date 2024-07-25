@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-sat-catalogos` will be documented in this file.
 
+## 0.1.2 - 2024-07-25
+
+Laravel 11 compatible
+
 ## 0.1.1 - 2024-02-19
 
 ### What's Changed
