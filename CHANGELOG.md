@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-sat-catalogos` will be documented in this file.
 
+## 0.1.3 - 2025-04-08
+
+**Full Changelog**: https://github.com/strappberry/laravel-sat-catalogos/compare/v0.1.2...v0.1.3
+
 ## 0.1.2 - 2024-07-25
 
 Laravel 11 compatible
